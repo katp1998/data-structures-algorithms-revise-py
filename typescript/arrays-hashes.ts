@@ -57,8 +57,12 @@ class Solution {
     s and t consist of lowercase English letters.
     */
    isAnagram(s: string, t: string): boolean {
-
-    return true; 
+        if(s.length === t.length){
+            let sArr = s.split('').sort().join();
+            let tArr = t.split('').sort().join();
+            return sArr == tArr;
+        }
+        return false;
    }
 
    /**
