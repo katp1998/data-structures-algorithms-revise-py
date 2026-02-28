@@ -112,6 +112,11 @@ class Solution {
         }
         return arr;
    }
+
+   groupAnagrams(strs: string[]): string[][] {
+    
+    return []
+   }
 }
 
 //creating an instance to call over the solution methods:
