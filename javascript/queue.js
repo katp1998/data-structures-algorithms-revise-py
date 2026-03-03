@@ -1,5 +1,5 @@
 
-Queue = () => {
+function Queue () {
     collection = []
     this.print = () => {
         console.log(collection);
@@ -27,10 +27,14 @@ Queue = () => {
 }
 
 
-PriorityQueue = () => {
+function PriorityQueue() {
     let collection = [];
     this.printCollection = () => {
         console.log(collection);
+    }
+
+    this.isEmpty = () => {
+        return collection.length === 0;
     }
 
     this.enqueue = (element) => {
@@ -39,7 +43,7 @@ PriorityQueue = () => {
         } else {
             let added = false;
             for (let i = 0; i < collection.length; i++){
-                if(element[i] < collection[i][1]){
+                if(element[i] < collection[i][1]){ //checks the priority of the items
                     collection.splice(i, 0, element);
                     added = true;
                     break;
@@ -56,3 +60,15 @@ PriorityQueue = () => {
         return value[0];
     }
 }
+
+
+let pq = new PriorityQueue();
+pq.enqueue(['kethmie perera', 2]);
+pq.enqueue(['Dhammika perera', 1]);
+pq.enqueue(['Athula perera', 0]);
+pq.enqueue(['Dilakshi perera', 3]);
+pq.printCollection();
+
+
+
+

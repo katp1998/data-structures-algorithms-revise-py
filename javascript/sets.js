@@ -1,7 +1,7 @@
 //basic implementation of sets as it is not properly implemented through JS:
 //ES6 has value, add, delete and size
 
-mySet = () => {
+function mySet () {
     var collection = [];
 
     this.has = (element) => {
